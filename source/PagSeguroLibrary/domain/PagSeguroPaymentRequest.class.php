@@ -111,6 +111,14 @@ class PagSeguroPaymentRequest
      * @var PagSeguroParameter
      */
     private $parameter;
+    
+    /***
+     * Class constructor to make sure the library was initialized.
+     */
+    public function __construct()
+    {
+        PagSeguroLibrary::init();
+    }
 
     /***
      * @return PagSeguroSender the sender
